@@ -93,6 +93,18 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
+        <!-- 使用 nacos 来作为配置中心——配置管理-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
     </dependencies>
 
 <!--以后在 dependments 里引入就不用进行版本管理了，全由这个管理-->
