@@ -3,6 +3,7 @@ package com.lgy.gulimall.product;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
 /**
@@ -17,6 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 		1)使用 Mapper-Scan
  * 		2）告诉mybaties -plus，sql 映射文件在哪
  */
+@EnableDiscoveryClient
 @MapperScan("com.lgy.gulimall.product.dao")
 @SpringBootApplication
 public class GulimallProductApplication {
