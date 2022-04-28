@@ -53,6 +53,39 @@
 	</properties>
 
 	<dependencies>
+
+<!--		P46 沒有按照老师的加载依赖，而是引入了nacos 的配置中心和注册中心-->
+		<dependency>
+			<groupId>com.lgy.gulimall</groupId>
+			<artifactId>gulimall-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!--        相当于其他服务也有了服务注册发现功能-->
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--			<version>2021.0.1.0</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; 使用 nacos 来作为配置中心——配置管理&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.alibaba.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+<!--			<version>2021.0.1.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-bootstrap</artifactId>-->
+<!--			<version>3.1.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-loadbalancer</artifactId>-->
+<!--			<version>3.1.0</version>-->
+<!--		</dependency>-->
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -237,6 +270,19 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-commons</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
+			<version>3.1.1</version>
 		</dependency>
 	</dependencies>
 
