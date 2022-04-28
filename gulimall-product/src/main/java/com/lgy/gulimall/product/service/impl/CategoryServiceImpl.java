@@ -58,6 +58,14 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         return level_1_Menus;
     }
 
+    @Override
+    public void removeMenusByIds(List<Long> asList) {
+
+        //TODO 检查当前删除的菜单，是不是被引用
+        //逻辑删除
+        baseMapper.deleteBatchIds(asList);
+    }
+
     /**
      * 递归查找当前菜单的子菜单
      * @param root
