@@ -44,6 +44,15 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
+<!-- 导入阿里云的镜像存储，用来存照片-->
+<!--		<dependency>-->
+<!--			<groupId>com.aliyun.oss</groupId>-->
+<!--			<artifactId>aliyun-sdk-oss</artifactId>-->
+<!--			<version>3.10.2</version>-->
+<!--		</dependency>-->
+
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

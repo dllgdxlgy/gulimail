@@ -17,6 +17,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * 	2. 配置Mybaties - Plus
  * 		1)使用 Mapper-Scan
  * 		2）告诉mybaties -plus，sql 映射文件在哪
+ *
+ * 	逻辑删除
  */
 @EnableDiscoveryClient
 @MapperScan("com.lgy.gulimall.product.dao")
