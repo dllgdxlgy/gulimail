@@ -1,5 +1,6 @@
 package com.lgy.gulimall.product.exception;
 
+import com.lgy.common.exception.BizCodeEnum;
 import com.lgy.common.utils.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
@@ -32,6 +33,12 @@ public class GulimallExceptionControllerAdvice {
             //FieldError : 获取到的参数提示
             errormap.put(fieldError.getField(),fieldError.getDefaultMessage());
         });
-        return R.error(400,"数据校验出现问题").put("data",errormap);
+        return R.error(BizCodeEnum.VAILD_EXCEPTION.getCode(),BizCodeEnum.VAILD_EXCEPTION.getMsg()).put("data",errormap);
+    }
+
+    @ExceptionHandler(value = Throwable.class)
+    public R handleException(Throwable throwable){
+
+        return R.error(BizCodeEnum.UNKNOW_EXCEPTION.getCode(), BizCodeEnum.UNKNOW_EXCEPTION.getMsg());
     }
 }
