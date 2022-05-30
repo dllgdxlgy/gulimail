@@ -31,6 +31,7 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
         );
 
         return new PageUtils(page);
+
     }
 
 }
