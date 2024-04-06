@@ -11,6 +11,10 @@ import org.springframework.web.server.ServerWebExchange;
 @Configuration
 public class GulimallCorsConfiguration {
 
+    /**
+     * 解决微服务中的跨越
+     * @return
+     */
     @Bean
     public CorsWebFilter corsWebFilter(){
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -22,8 +26,10 @@ public class GulimallCorsConfiguration {
         corsConfiguration.addAllowedMethod("*");
         //corsConfiguration.addAllowedOrigin("*");
         corsConfiguration.addAllowedOriginPattern("*");
+        //是否允许携带cookie进行跨域，不设置就会丢cookie
         corsConfiguration.setAllowCredentials(true);
 
+        //任意路径都需要跨域配置
         source.registerCorsConfiguration("/**",corsConfiguration);
         return new CorsWebFilter(source);
     }

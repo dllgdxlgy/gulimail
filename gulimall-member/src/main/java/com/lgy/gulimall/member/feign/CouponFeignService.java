@@ -12,6 +12,8 @@ public interface CouponFeignService {
      * 2. 当我们以后调用这个方法，这个就会去 注册中心找远程服务gulimall-coupon 然后调用的下面路径的方法
      * @return
      */
+
+    // 记得远程调用的路径要写全
     @RequestMapping("/coupon/coupon/member/list")
     public R membercoupons();
 

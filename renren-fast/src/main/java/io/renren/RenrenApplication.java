@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
+//注册到nacos中心中
 @EnableDiscoveryClient
 @SpringBootApplication
 public class RenrenApplication {

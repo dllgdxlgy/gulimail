@@ -9,12 +9,14 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
 
-
+# 指定 mybaties plus 的映射文件
 mybatis-plus:
-  mapper-locations: classpath*:/mapper/**/*.xml
+  # classpath* 表示的是引入的 jar 包下的类路径下的都扫描
+  # classpath 只表示扫描自己类路径下的
+  mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
-      id-type: auto # 配置自增主键
+      id-type: auto # 配置自增主键，后面数据量大了再改。
       logic-delete-value: 1 #配置菜单的逻辑删除的规则
       logic-not-delete-value: 0
 

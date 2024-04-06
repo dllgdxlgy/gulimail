@@ -44,7 +44,7 @@ public class CategoryEntity implements Serializable {
 	/**
 	 * 是否显示[0-不显示，1显示]
 	 */
-	//代表着逻辑删除字段，括号里可以自己定义。1代表现实，0代表不显示
+	//代表着逻辑删除字段，括号里可以自己定义。1代表显示，0代表不显示
 	@TableLogic(value = "1",delval = "0")
 	private Integer showStatus;
 	/**

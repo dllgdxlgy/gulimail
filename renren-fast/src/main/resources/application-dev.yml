@@ -3,7 +3,8 @@ spring:
         type: com.alibaba.druid.pool.DruidDataSource
         druid:
             driver-class-name: com.mysql.cj.jdbc.Driver
-            url: jdbc:mysql://192.168.56.10:3306/gulimall-admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+            #虚拟机数据库地址
+            url: jdbc:mysql://192.168.56.10:3306/gulimall_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
             username: root
             password: root
             initial-size: 10
